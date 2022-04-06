@@ -9,5 +9,11 @@ public class Cards
 	public string name = "";
 
 	public int costPoints = 0;
+
+	public string rarity
+    {
+		get { return name; }
+		set { name = value; }
+    }
 }
 	

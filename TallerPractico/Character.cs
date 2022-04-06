@@ -10,14 +10,14 @@ public class Character : Cards
 
 	public int ap
     {
-		get => BattackPoints;
-		private set => BattackPoints = value;
+		get { return attackPoints; }
+		set { attackPoints = value; }
     }
 
 	public int rp
     {
-		get => resistPoints;
-		private set => resistPoints = value;
+		get { return resistPoints; }
+		set { resistPoints = value; }
     }
 
 
@@ -26,4 +26,24 @@ public class Character : Cards
 		ap = attackPoints;
 		rp = resistPoints;
 	}
+
+	public void DecrAttackPoints(int delta)
+    {
+		ap -= delta;
+    }
+
+	public void DecrResistPoints (int delta)
+    {
+		rp -= delta;
+    }
+
+	public void IncreAttackPoints(int delta)
+    {
+		ap += delta;
+    }
+
+	public void IncreResistPoints (int delta)
+    {
+		rp += delta;
+    }
 }
