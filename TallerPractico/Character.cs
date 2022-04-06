@@ -25,7 +25,7 @@ public class Character : Cards
     }
 
 
-	public Character(int attackPoints, int resistPoints, string name, int costPoints, rarity, affinity)
+	public Character(int attackPoints, int resistPoints, string name, int costPoints, rarity, affinity) : base (name,rarity,costPoints,affinity)
 	{
 		ap = attackPoints;
 		rp = resistPoints;
@@ -53,7 +53,13 @@ public class Character : Cards
 
 	public void UseEquip (Equip equip)
     {
-		use equip = Equip;
+		UseEquip = equip;
+
+
+		string afinityCharacter = Affinity.ToString();
+		string afinidadEquip = equip.Affinity.ToString();
+		
+		
 	}
 
 	public void RemoveEquip (Equip equip)
