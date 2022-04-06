@@ -1,6 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 
-public class SupportSkill	
+public class SupportSkill : Cards
 {
 	public enum effectType { ReduceAP, ReduceRP, ReduceAll, DestroyEquip, RestoreRP }
 
@@ -12,16 +13,16 @@ public class SupportSkill
 		set { effectPoints = value; }
     }
 
-	public string effectType
+	public string EffectType
     {
 		get { return effectType; }
 		set { effectType = value; }
     }
 
 
-	public SupportSkill()
+	public SupportSkill(int effectPoints,effectType,string name,int costPoints) : base(name,costPoints)
 	{
-		EffectType = effectType;
+		this.EffectType = effectType;
 		EffectPoints = effectPoints;
 	}
 }

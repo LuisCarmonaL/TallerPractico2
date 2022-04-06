@@ -1,17 +1,27 @@
 ﻿using System;
+using System.Collections.Generic;
 
 public class Deck
 {
-	int characters = 0;
-	int equipment = 0;
-	int SupportSkills = 0;
+	private List<Card> cards = new List<Card>();
+	private int costPoints;
 
+	public int CostPoints
+    {
+		get { return costPoints; }
+		set { costPoints = value; }
+    }
 
-	public Deck()
+	public int Cards
+    {
+		get { return cards; }
+		set { cards = value; }
+    }
+
+	public Deck(List<Card> cards, int costPoints)
 	{
-		characters = 5;
-		equipment = 10;
-		SupportSkills = 5;
+		this.Cards = cards;
+		this.CostPoints = costPoints;
 	}
 
 	public int DestroyDeck()

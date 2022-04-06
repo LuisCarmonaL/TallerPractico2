@@ -1,12 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
 
 public class Character : Cards
 {
 	public int attackPoints = 0;
 	public int resistPoints = 0;
 
-	private int BattackPoints;
-	private int BresistPoints;
+	//private int BattackPoints;
+	//private int BresistPoints;
+
+	private list<Equip> equips;
+
 
 	public int ap
     {
@@ -21,7 +25,7 @@ public class Character : Cards
     }
 
 
-	public Character()
+	public Character(int attackPoints, int resistPoints, string name, int costPoints, rarity, affinity)
 	{
 		ap = attackPoints;
 		rp = resistPoints;
@@ -46,4 +50,16 @@ public class Character : Cards
     {
 		rp += delta;
     }
+
+	public void UseEquip (Equip equip)
+    {
+		use equip = Equip;
+	}
+
+	public void RemoveEquip (Equip equip)
+    {
+		equips.Remove(equip);	
+    }
+
+		
 }

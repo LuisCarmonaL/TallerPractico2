@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 public class Cards 
 {
@@ -6,14 +7,29 @@ public class Cards
 
 	public enum rarity { Common, Rare, SuperRare, UltrarRare };
 
-	public string name = "";
+	private string name;
 
-	public int costPoints = 0;
+	private int costPoints;
 
-	public string rarity
+	public string Rarity
     {
 		get { return name; }
 		set { name = value; }
+    }
+
+	public string Affinity
+    {
+		get { return affinity; }
+		set { affinity = value; }
+    }
+
+
+	public Cards(int costPoints,string name,rarity,affinity)
+    {
+		Rarity = rarity;
+		Affinity = affinity;
+		this.name = name;
+		this.costPoints = costPoints;
     }
 }
 	

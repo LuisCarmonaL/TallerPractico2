@@ -1,33 +1,36 @@
 ﻿using System;
+using System.Collections.Generic;
 
 public class Equip : Cards
 {
 	public enum targetAtributte { AP, RP, ALL }
 
+	public int effectPoints = 0;
+
 
 
 	public int EffectPoints
     {
-		get { return EffectPoints; }
-		set { EffectPoints = value; }
+		get { return effectPoints; }
+		set { effectPoints = value; }
     }
 
-	public string affinity
+	public string Affinity
     {
 		get { return affinity; }
 		set { affinity = value; }
     }
 
-	public string targetAtribute
+	public string TargetAtributte
     {
-		get { return targetAtribute; }
-		set { targetAtribute = value; }
+		get { return targetAtributte; }
+		set { targetAtributte = value; }
     }
 
-	public Equip()
+	public Equip(int effectPoints, targetAtributte, string name, int costPoints) : base(name, costPoints)
 	{
 		EffectPoints = effectPoints;
-		affinity = affinity;
-		targetAtribute = targetAtribute;
+		Affinity = affinity;
+		TargetAtributte = targetAtributte;
 	}
 }
